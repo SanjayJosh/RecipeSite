@@ -20,4 +20,4 @@
 npm start
 
 ```
-* Try out the projeect by entering the URL in the browser [http://localhost:3000](http://localhost:3000)
+* Try out the project by entering the URL in the browser [http://localhost:3000](http://localhost:3000)
