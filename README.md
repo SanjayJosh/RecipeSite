@@ -5,7 +5,7 @@
 
 *This project _WILL NOT_ run without these dependencies*
 ## Commands to Run
- * Change your working directory to RecipeApp
+ **Change your working directory to RecipeApp**
  ```
  cd RecipeApp/
  ```
