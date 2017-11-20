@@ -1,0 +1,33 @@
+body
+{
+	overflow-x: hidden;
+}
+.input-group
+{
+	position: absolute;
+	left: 65%;
+	top:3%;
+}
+.card /* Main Card View  */
+{
+
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: absolute;
+	left: 27%;
+}
+
+.card-block
+{
+	padding: 3%;
+	text-align: justify;
+}
+
+.ingredients /* Listing of ingredients */
+{
+	list-style-type: circle;
+	list-style-position: inside;
+}
+.no-list-style
+{
+	list-style-type: none;	
+}

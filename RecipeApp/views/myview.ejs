@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title><%=title %>
+    </title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/bootstrap.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form>
+      <br>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" id="txtSearch"/>
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit">
+                <span class="glyphicon glyphicon-search">
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="col-sm-9">
+        <div class="card">
+          <img class="card-img-top" src="/images/lol.jpeg" style="width:100%" alt="Card image cap">
+          <div class="card-block">
+            <br>
+            <h2 class="card-title text-center"> <%=title %>
+            </h2>
+            <br>
+            <h4 class="card-subtitle mb-2 text-muted"> Author</h4>
+            <p class="card-text">
+              <%=author %>
+            </p>
+            <br>
+            <h4 class="card-subtitle mb-2 text-muted">
+              Ingredients
+            </h4>
+            <ul class="ingredients">
+              <% ingredients.forEach( function(ingredient)
+              {%>
+                <li> <%=ingredient.name %>
+                </li>
+              <%
+              });
+              %>
+            </ul>
+            <br>
+            <h4 class="card-subtitle mb-2 text-muted">Procedure</h4>
+            <p class="card-text">
+              <ul class="no-list-style">
+                <% for(var i=0;i<procedure.length;++i)
+                {
+                %>
+                <li>
+                  <%=procedure[i] %>
+                </li>
+                <%
+                }
+                %>
+              </ul>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
