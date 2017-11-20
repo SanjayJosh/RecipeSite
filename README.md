@@ -1,5 +1,7 @@
 
-Dependencies : node and npm
-
-npm install --save
+## Dependencies Required
+* node 
+* npm
+## Commands to Run
+  **npm install --save**
 
