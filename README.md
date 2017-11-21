@@ -6,7 +6,7 @@
 
 **This project _WILL NOT_ run without these dependencies**
 ## Commands to Run
- *Change your working directory to RecipeApp within the git Project "RecipeSite"
+ * Change your working directory to RecipeApp within the git Project "RecipeSite"
  ```
  cd RecipeSite/
  cd RecipeApp/
