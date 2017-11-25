@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Recipe Website
+    </title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/bootstrap.js"></script>
+  </head>
+  <body>
+  <%
+  String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+  };
+
+  url = "http://localhost:3000/"; //Need to change during deployment
+
+  %>
+    <form method="post" action="<%= url %>"> 
+      <br>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="input-group">
+            <input type="text" class="form-control" name="search" placeholder="Search" id="txtSearch"/>
+            <div class="input-group-btn">
+              <button id="searchBtn" class="btn btn-default" type="submit">
+                <span class="glyphicon glyphicon-search">
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+     <h3> No recipe Found.</h3>
+  </body>
+</html>

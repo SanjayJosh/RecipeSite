@@ -8,15 +8,23 @@
     <script type="text/javascript" src="/javascripts/bootstrap.js"></script>
   </head>
   <body>
+  <%
+  String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+  };
 
-    <form>
+  url = "http://localhost:3000/"; //Need to change during deployment
+
+  %>
+    <form method="get" action="<%= url %>"> 
       <br>
       <div class="row">
         <div class="col-md-5">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" id="txtSearch"/>
+            <input type="text" class="form-control" name="search" placeholder="Search" id="txtSearch"/>
             <div class="input-group-btn">
-              <button class="btn btn-default" type="submit">
+              <button id="searchBtn" class="btn btn-default" type="submit">
                 <span class="glyphicon glyphicon-search">
                 </span>
               </button>
@@ -48,7 +56,7 @@
             <ul class="ingredients">
               <% recipe.ingredients.forEach( function(ingredient)
               {%>
-                <li> <%=ingredient.name %>
+                <li> <%=ingredient %>
                 </li>
               <%
               });
@@ -58,7 +66,7 @@
             <h4 class="card-subtitle mb-2 text-muted">Procedure</h4>
             <br>
             <p class="card-text">
-             <%=recipe. procedure %>
+             <%=recipe.procedure %>
 
             </p>
             <br>

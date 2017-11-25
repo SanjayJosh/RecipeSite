@@ -3,7 +3,8 @@ var router = express.Router();
 var path = require('path');
 var mongoose = require('mongoose');
 
-/* GET home page. */
+
+var ObjectId = mongoose.Types.ObjectId;
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
     return target.split(search).join(replacement);
@@ -31,29 +32,33 @@ var recipes = mongoose.model('recipe',recipeSchema);
 
 router.get('/', function(req, res, next)
 {
-  /*var obj;
-  fs.readFile(path.join(__dirname,"../","public","data","testfile.json"),
-    function(err,jsFile,obj)
-    {
-        if(err)
-        {
-            next(err)
-        }
-        else
-        {
-          var obj= JSON.parse(jsFile)
-          console.log(obj.title)
-          res.render('myview', obj);
-        }
-    }
-  )*/
+  findJson = {}
+  console.log(req.method)
+  if( req.query.search )
+  {
+  		s = new RegExp(req.query.search )
+  		console.log(s)
+  		var objId = new ObjectId( "123456789012"  );
+  		findJson = { $or:[ {'_id':objId}, {'title': s},{'author':s},{'ingredients': s},{'procedure': s} ]};
+  		
+  		console.log(findJson) 
+  }
 
-  recipes.find({},function(err,jsonResp){
 
-        //jsonResp[0].procedure = jsonResp[0].procedure.replaceAll('\r\n','<br><br>').replaceAll('\n','<br><br>');
-        res.render('myview',{recipes: jsonResp});
+  	recipes.find(findJson,function(err,jsonResp){
 
-  });
+  			if(err || jsonResp.length == 0)
+        	{
+        		res.render('notfound')
+        	}
+        	else
+        	{
+        		res.render('myview',{recipes: jsonResp})	
+        	}
+        	
+
+  		});
+  
 
 });
 
