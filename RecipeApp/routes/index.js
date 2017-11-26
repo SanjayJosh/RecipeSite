@@ -1,14 +1,41 @@
 var express = require('express');
-var router = express.Router();
 var path = require('path');
 var mongoose = require('mongoose');
 
+var router = express.Router();
 
-var ObjectId = mongoose.Types.ObjectId;
+
+
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
     return target.split(search).join(replacement);
 };
+
+
+//Every user searches with the same ObjectId instead of different Ids for efficiency
+//Singleton Pattern
+var SingleObjectId = (function () {
+    var instance;
+ 
+    function createInstance() {
+        var object = new ObjectId( "123456789012"  );
+        return object;
+    }
+ 
+    return {
+        getInstance: function () {
+            if (!instance) {
+                instance = createInstance();
+            }
+            return instance;
+        }
+    };
+})();
+
+
+
+
+var ObjectId = mongoose.Types.ObjectId;
 
 var Schema = mongoose.Schema;
 
@@ -37,8 +64,7 @@ router.get('/', function(req, res, next)
   if( req.query.search )
   {
   		s = new RegExp(req.query.search )
-  		console.log(s)
-  		var objId = new ObjectId( "123456789012"  );
+  		var objId = SingleObjectId.getInstance() ;
   		findJson = { $or:[ {'_id':objId}, {'title': s},{'author':s},{'ingredients': s},{'procedure': s} ]};
   		
   		console.log(findJson) 
