@@ -1,10 +1,10 @@
 var express = require('express');
 var path = require('path');
 var mongoose = require('mongoose');
-
+var fs = require('fs')
 var router = express.Router();
 
-
+var imgUrl="/home/sanjay/Desktop/21.jpg"
 
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
@@ -16,12 +16,12 @@ String.prototype.replaceAll = function(search, replacement) {
 //Singleton Pattern
 var SingleObjectId = (function () {
     var instance;
- 
+
     function createInstance() {
         var object = new ObjectId( "123456789012"  );
         return object;
     }
- 
+
     return {
         getInstance: function () {
             if (!instance) {
@@ -47,16 +47,19 @@ imgurl:String,
 ingredients:Array,
 procedure:String,
 likes:Number,
-Comments: Array
+Comments: Array,
+images:Array
 
 });
-
+var imageSchema = new Schema({
+    img: { data: Buffer, contentType: String }
+});
 var mongoDB = "mongodb://crazyboy:incorrect@ds245715.mlab.com:45715/crowdsource_recipes";
 
 mongoose.connect(mongoDB);
 
 var recipes = mongoose.model('recipe',recipeSchema);
-
+var image = mongoose.model('image',imageSchema);
 router.get('/', function(req, res, next)
 {
   findJson = {}
@@ -66,8 +69,8 @@ router.get('/', function(req, res, next)
   		s = new RegExp( ".*" + req.query.search + ".*",'i')
   		var objId = SingleObjectId.getInstance() ;
   		findJson = { $or:[ {'_id':objId}, {'title': s},{'author':s},{'ingredients': s},{'procedure': s} ]};
-  		
-  		console.log(findJson) 
+
+  		console.log(findJson)
   }
 
 
@@ -79,12 +82,13 @@ router.get('/', function(req, res, next)
         	}
         	else
         	{
-        		res.render('myview',{recipes: jsonResp})	
+            console.log(jsonResp)
+        		res.render('myview',{recipes: jsonResp})
         	}
-        	
+
 
   		});
-  
+
 
 });
 
