@@ -63,7 +63,7 @@ router.get('/', function(req, res, next)
   console.log(req.method)
   if( req.query.search )
   {
-  		s = new RegExp(req.query.search )
+  		s = new RegExp( ".*" + req.query.search + ".*",'i')
   		var objId = SingleObjectId.getInstance() ;
   		findJson = { $or:[ {'_id':objId}, {'title': s},{'author':s},{'ingredients': s},{'procedure': s} ]};
   		

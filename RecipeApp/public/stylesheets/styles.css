@@ -31,3 +31,7 @@ body
 {
 	list-style-type: none;	
 }
+.card-text
+{
+	white-space: pre-line;
+}
