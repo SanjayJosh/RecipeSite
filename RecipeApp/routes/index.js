@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var fs = require('fs')
 var router = express.Router();
 
-var imgUrl="/home/sanjay/Desktop/21.jpg"
+//var imgUrl="/home/sanjay/Desktop/21.jpg"
 
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;

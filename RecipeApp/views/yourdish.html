@@ -1,0 +1,41 @@
+<html>
+  <head>
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/yourdish.css">
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/bootstrap.js"></script>
+    <script type="text/javascript" src="/javascripts/dynamic.js"></script>
+
+  </head>
+  <body>
+    <div class="hidden-field">
+      <input class="niv" type="text" name="ingredients[]" />
+      <span >
+        <input type="button" class="removeParam" value="Remove Field">
+      </span>
+    </div>
+    <form action="/yourdish/queryDish" method="POST" onsubmit="return isValidform()">
+      <div id="dynamic-div">
+        <div class="field">
+          <input class="niv" type="text" name="ingredients[]" />
+          <span >
+            <input type="button" class="removeParam" value="Remove Field">
+          </span>
+        </div>
+      </div>
+
+
+
+      <div>
+          <input type="button" class="add" id="addParam" value="Add Field">
+      </div>
+      <div>
+          <input type="submit" name="submit" value ="submit" />
+      </div>
+
+    </form>
+
+  </body>
+</html>
