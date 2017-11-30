@@ -1,8 +1,13 @@
 body
 {
 	overflow-x: hidden;
+	background:#B0BEC5;
 }
 
+h2
+{
+	color:#d6d0c5;	
+}
 
 .input-group
 {
@@ -13,9 +18,13 @@ body
 .card /* Main Card View  */
 {
 
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 20px 0 rgba(0, 0, 0, 0.19);
 	position: relative;
-	left: 27%;
+	left: 18%;
+	background: #455A64;
+	color: #f2f1ef;
+
+	
 }
 
 .card-block
@@ -24,6 +33,7 @@ body
 	text-align: justify;
 	font-family: "Times New Roman", Times, serif;
 	font-size: 1.7em;
+	
 
 }
 

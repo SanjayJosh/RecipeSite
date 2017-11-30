@@ -25,7 +25,7 @@
             <input type="text" class="form-control" name="search" placeholder="Search" id="txtSearch"/>
             <div class="input-group-btn">
               <button id="searchBtn" class="btn btn-default" type="submit">
-                <span class="glyphicon glyphicon-search">
+                <span class="glyphicon glyphicon-search" >
                 </span>
               </button>
             </div>
@@ -42,15 +42,17 @@
           <img class="card-img-top" src="<%=recipe.imgurl %>" style="width:100%" alt="Card image cap">
           <div class="card-block">
             <br>
+	    <a href="/item/<%=recipe.title %>" >
             <h1 class="card-title text-center"> <%=recipe.title %>
             </h1>
+	   </a>
             <br>
-            <h2 class="card-subtitle mb-2 text-muted"> Author</h2>
+            <h2 class="card-subtitle mb-2 "> Author</h2>
             <p class="card-text">
               <%=recipe.author %>
             </p>
             <br>
-            <h2 class="card-subtitle mb-2 text-muted">
+            <h2 class="card-subtitle mb-2 ">
               Ingredients
             </h2>
             <ul class="ingredients">
@@ -63,7 +65,7 @@
               %>
             </ul>
             <br>
-            <h2 class="card-subtitle mb-2 text-muted">Procedure</h2>
+            <h2 class="card-subtitle mb-2 ">Procedure</h2>
             <br>
             <p class="card-text">
 
