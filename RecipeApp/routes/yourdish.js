@@ -52,13 +52,14 @@ router.post('/queryDish',function(req,res,next)
   		var l = ingredients.length;
   		for(var i=0;i<l;i++)
   		{
-  			query.push({'ingredients': new RegExp( ".*" + ingredients[i] + ".*",'i') })
+        var myjson={$regex:ingredients[i]}
+  			query.push({'ingredients': myjson })
         //query.push({'ingredients': ingredients[i]})
   		}
 
-  		query.push({'_id':objId})
+  		//query.push({'_id':objId})
       console.log(query)
-  		findJson = query.join(",")
+  		findJson = {$and:query}
 
   		console.log(findJson)
   }
@@ -72,7 +73,7 @@ router.post('/queryDish',function(req,res,next)
         	}
         	else
         	{
-            //console.log(jsonResp)
+            console.log(jsonResp.length)
         		res.render('myview',{recipes: jsonResp})
         	}
 
