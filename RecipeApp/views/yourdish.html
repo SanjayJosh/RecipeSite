@@ -1,27 +1,94 @@
 <html>
   <head>
-
+	<title> What Can You Make? </title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/yourdish.css">
     <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
     <script type="text/javascript" src="/javascripts/bootstrap.js"></script>
     <script type="text/javascript" src="/javascripts/dynamic.js"></script>
-
+	
+  <link href="/stylesheets/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/javascripts/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Cookery Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!---->
+<link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="/javascripts/move-top.js"></script>
+    <script type="text/javascript" src="/javascripts/easing.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){
+          event.preventDefault();
+          $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+      });
+    </script>
+  <!-- start-smoth-scrolling -->
+<link href="/stylesheets/homestyles.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/component.css" />
+  <!-- animation-effect -->
+<link href="/stylesheets/animate.min.css" rel="stylesheet">
+<script src="/javascripts/wow.min.js"></script>
+<script>
+ new WOW().init();
+</script> 
   </head>
-  <body>
+  
+  <body style="background: #384047;font-family: sans-serif;">
+  
+<div class="container" style="background-color:black;color:white;padding:20px;">
+    <div class="logo animated wow pulse" data-wow-duration="1000ms" data-wow-delay="500ms">
+      <h1><a href="index.html"><span>C</span><img src="/images/oo.png" alt=""><img src="/images/oo.png" alt="">kery</a></h1>
+    </div>
+    <div class="nav-icon">
+      <a href="" class="navicon"></a>
+        <div class="toggle">
+          <ul class="toggle-menu">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a  href="menu.html">Menu</a></li>
+            <li><a  href="blog.html">Blog</a></li>
+            <li><a  href="typo.html">Codes</a></li>
+            <li><a  href="events.html">Events</a></li>
+            <li><a  href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      <script>
+      $('.navicon').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('navicon--active');
+        $('.toggle').toggleClass('toggle--active');
+      });
+      </script>
+    </div>
+  <div class="clearfix"></div>
+  </div>
+  </form>
+</div>  
+  
     <div class="hidden-field">
       <input class="niv" type="text" name="ingredients[]" />
       <span >
-        <input type="button" class="removeParam" value="Remove Field">
+        <input type="button" class="removeParam" value="Remove Item">
       </span>
     </div>
     <form action="/yourdish/queryDish" method="POST" onsubmit="return isValidform()">
+	  <h3> <center> <b> What's in your kitchen? </b> </center> </h3>
       <div id="dynamic-div">
         <div class="field">
-          <input class="niv" type="text" name="ingredients[]" />
+		  <input class="niv" type="text" name="ingredients[]" />
           <span >
-            <input type="button" class="removeParam" value="Remove Field">
+            <input type="button" class="removeParam" value="Remove Item">
           </span>
         </div>
       </div>
@@ -29,10 +96,10 @@
 
 
       <div>
-          <input type="button" class="add" id="addParam" value="Add Field">
+          <input type="button" class="add" id="addParam" value="Add Item">
       </div>
       <div>
-          <input type="submit" name="submit" value ="submit" />
+          <input type="submit" name="submit" value ="Find your dish!" />
       </div>
 
     </form>
