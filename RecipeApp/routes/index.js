@@ -80,6 +80,14 @@ router.get('/', function(req, res, next)
 
 
 });
+router.get('/index', function(req, res, next)
+{
+  res.sendFile(path.join(__dirname,"../", 'views','index.html'));
+});
+router.get('/index.html', function(req, res, next)
+{
+  res.sendFile(path.join(__dirname,"../", 'views','index.html'));
+});
 router.get('/home', function(req, res, next)
 {
   res.sendFile(path.join(__dirname,"../", 'views','index.html'));
