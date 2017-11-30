@@ -136,3 +136,12 @@ body{
     font-size: 15px;
 }
 }
+.searchbar
+{
+	width:100%
+}
+.searchbar .row
+{
+	display: table;
+	margin: 0 auto;
+}
