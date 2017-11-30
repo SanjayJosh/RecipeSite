@@ -23,7 +23,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!---->
 <link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
-<link href="css/styles.css" rel="stylesheet">
+<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="/javascripts/move-top.js"></script>
+		<script type="text/javascript" src="/javascripts/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<!-- start-smoth-scrolling -->
+<link href="/stylesheets/homestyles.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<!-- animation-effect -->
 <link href="/stylesheets/animate.min.css" rel="stylesheet">
@@ -44,12 +56,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<a href="#" class="navicon"></a>
 				<div class="toggle">
 					<ul class="toggle-menu">
-						<li><a  href="index.html">Home</a></li>
-						<li><a  href="menu.html">Menu</a></li>
-						<li><a   href="blog.html">Blog</a></li>
-						<li><a  href="typo.html">Codes</a></li>
-						<li><a  href="events.html">Events</a></li>
-						<li><a class="active" href="contact.html">Contact</a></li>
+						<li><a class="active" href="/index">Home</a></li>
+						<li><a  href="/myform">Upload Recipe</a></li>
+						<li><a  href="/yourdish">Prepare Your Dish</a></li>
+						<li><a  href="/contact">Contact</a></li>
 					</ul>
 				</div>
 			<script>
@@ -72,10 +82,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 menu-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
 					<h3>Contact</h3>
 					<label><i class="glyphicon glyphicon-menu-up"></i></label>
-					<span>There are many variations</span>
+					<span>Let us know how we can cook a better website!</span>
 				</div>
 				<div class="col-md-8 menu-right animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour , or randomised words which don't look even slightly believable.There are many variations by injected humour. There are many variations of passages of Lorem Ipsum available.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour , or randomised words</p>
+					
+				<p><b>Meet our team!</b></p>
+				<ul style="list-style-type:none;">
+						<li style="float:left; padding-right:100px;padding-bottom:10px;">Sanjay P Josh</li>
+						<li style="float:left; padding-right:100px;padding-bottom:10px;">Siddharth Srinivasan</li>
+						<li style="float:left; padding-right:100px;padding-bottom:10px;">Shwetha Srinath</li>
+						<li style="float:left; padding-right:100px;padding-bottom:10px;">Shravya Kadur</li>
+						<li style="float:left; padding-right:90px;padding-bottom:10px;">Shibashish Sen</li>
+						<li style="float:left; padding-right:100px;padding-bottom:10px;">Savitri Kerakalamatti</li>
+						<li style="float:left; padding-right:100px;padding-bottom:10px;">Rahul Ranganath</li>
+						<li style="float:left; padding-right:100px;padding-bottom:10px;">Shreyaa Giridhar</li><br>
+
+					</ul><br>
+				<br><p>This website was designed with a goal to learn, which we did in every step of the process. There is a huge room for improvement, and we'd love to hear it from you!
+				</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -83,15 +107,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-5 contact-map">
 			<h5>Google Map</h5>
 			<div class="map animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37494223.23909492!2d103!3d55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x453c569a896724fb%3A0x1409fdf86611f613!2sRussia!5e0!3m2!1sen!2sin!4v1415776049771"></iframe>
+				<iframe src="https://www.google.com/maps/embed/v1/place?q=PES%20University&key=AIzaSyDDDeGXWzG9GUzX31Kus-q2GkHA8-Jnwq8"></iframe>
 
 			</div>
 			<div class="address">
 					      <h4>Address</h4>
-					      <p> Richard McClintock</p>
-						  <p>Letraset sheets </p>
-						  <p>ph : +123 859 6050</p>
-						  <p>Email : <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+					      <p> PES University</p>
+						  <p> Bangalore </p>
+						  <p>Email : <a href="mailto:example@gmail.com">contact@foodnetwork.com</a></p>
 					 </div>
 			</div>
 			<div class="col-md-7 contact-para animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">

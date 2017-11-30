@@ -92,4 +92,8 @@ router.get('/home', function(req, res, next)
 {
   res.sendFile(path.join(__dirname,"../", 'views','index.html'));
 });
+router.get('/contact', function(req, res, next)
+{
+  res.sendFile(path.join(__dirname,"../", 'views','contact.html'));
+});
 module.exports = router;
