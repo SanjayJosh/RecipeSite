@@ -6,6 +6,8 @@ var router = express.Router();
 
 //var imgUrl="/home/sanjay/Desktop/21.jpg"
 
+var recipes = require('../server/recipe_schema');
+
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
     return target.split(search).join(replacement);
@@ -37,29 +39,16 @@ var SingleObjectId = (function () {
 
 var ObjectId = mongoose.Types.ObjectId;
 
-var Schema = mongoose.Schema;
-
-var recipeSchema = new Schema({
-
-title:String,
-author:String,
-imgurl:String,
-ingredients:Array,
-procedure:String,
-likes:Number,
-Comments: Array,
-images:Array
-
-});
-var imageSchema = new Schema({
+/*var imageSchema = new Schema({
     img: { data: Buffer, contentType: String }
-});
+});*/
 var mongoDB = "mongodb://crazyboy:incorrect@ds245715.mlab.com:45715/crowdsource_recipes";
 
 mongoose.connect(mongoDB);
 
-var recipes = mongoose.model('recipe',recipeSchema);
-var image = mongoose.model('image',imageSchema);
+
+//var image = mongoose.model('image',imageSchema);
+
 router.get('/', function(req, res, next)
 {
   findJson = {}
