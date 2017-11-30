@@ -42,17 +42,17 @@
           <img class="card-img-top" src="<%=recipe.imgurl %>" style="width:100%" alt="Card image cap">
           <div class="card-block">
             <br>
-            <h2 class="card-title text-center"> <%=recipe.title %>
-            </h2>
+            <h1 class="card-title text-center"> <%=recipe.title %>
+            </h1>
             <br>
-            <h4 class="card-subtitle mb-2 text-muted"> Author</h4>
+            <h2 class="card-subtitle mb-2 text-muted"> Author</h2>
             <p class="card-text">
               <%=recipe.author %>
             </p>
             <br>
-            <h4 class="card-subtitle mb-2 text-muted">
+            <h2 class="card-subtitle mb-2 text-muted">
               Ingredients
-            </h4>
+            </h2>
             <ul class="ingredients">
               <% recipe.ingredients.forEach( function(ingredient)
               {%>
@@ -63,7 +63,7 @@
               %>
             </ul>
             <br>
-            <h4 class="card-subtitle mb-2 text-muted">Procedure</h4>
+            <h2 class="card-subtitle mb-2 text-muted">Procedure</h2>
             <br>
             <p class="card-text">
 		
