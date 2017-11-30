@@ -1,4 +1,4 @@
-$(".email").on("change keyup paste", function() {
+$(".title").on("change keyup paste", function() {
   if ($(this).val()) {
     $(".icon-paper-plane").addClass("next");
   } else {
@@ -10,13 +10,14 @@ $(".next-button").hover(function() {
   $(this).css("cursor", "pointer");
 });
 
-$(".next-button.email").click(function() {
+$(".next-button.title").click(function() {
   console.log("Something");
-  $(".email-section").addClass("fold-up");
-  $(".password-section").removeClass("folded");
+  $(".title-section").addClass("fold-up");
+  $(".author-section").removeClass("folded");
 });
 
-$(".password").on("change keyup paste", function() {
+
+$(".author").on("change keyup paste", function() {
   if ($(this).val()) {
     $(".icon-lock").addClass("next");
   } else {
@@ -24,17 +25,44 @@ $(".password").on("change keyup paste", function() {
   }
 });
 
-$(".next-button").hover(function() {
-  $(this).css("cursor", "pointer");
-});
-
-$(".next-button.password").click(function() {
+$(".next-button.author").click(function() {
   console.log("Something");
-  $(".password-section").addClass("fold-up");
-  $(".repeat-password-section").removeClass("folded");
+  $(".author-section").addClass("fold-up");
+  $(".ingredients-section").removeClass("folded");
 });
 
-$(".repeat-password").on("change keyup paste", function() {
+
+$(".ingredients").on("change keyup paste", function() {
+  if ($(this).val()) {
+    $(".icon-lock").addClass("next");
+  } else {
+    $(".icon-lock").removeClass("next");
+  }
+});
+
+$(".next-button.ingredients").click(function() {
+  console.log("Something");
+  $(".ingredients-section").addClass("fold-up");
+  $(".procedure-section").removeClass("folded");
+});
+
+
+$(".procedure").on("change keyup paste", function() {
+  if ($(this).val()) {
+    $(".icon-lock").addClass("next");
+  } else {
+    $(".icon-lock").removeClass("next");
+  }
+});
+
+$(".next-button.procedure").click(function() {
+  console.log("Something");
+  $(".procedure-section").addClass("fold-up");
+  $(".image-section").removeClass("folded");
+});
+
+
+$(".image").on("change keyup paste", function() {
   if ($(this).val()) {
     $(".icon-repeat-lock").addClass("next");
   } else {
@@ -42,8 +70,9 @@ $(".repeat-password").on("change keyup paste", function() {
   }
 });
 
-$(".next-button.repeat-password").click(function() {
+$(".next-button.image").click(function() {
   console.log("Something");
-  $(".repeat-password-section").addClass("fold-up");
+  $(".image-section").addClass("fold-up");
   $(".success").css("marginTop", 0);
+  document.getElementsByTagName("form")[0].submit();
 });
