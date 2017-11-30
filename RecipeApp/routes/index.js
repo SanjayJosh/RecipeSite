@@ -49,7 +49,7 @@ mongoose.connect(mongoDB);
 
 //var image = mongoose.model('image',imageSchema);
 
-router.get('/', function(req, res, next)
+router.get('/myview', function(req, res, next)
 {
   findJson = {}
   console.log(req.method)
@@ -80,21 +80,17 @@ router.get('/', function(req, res, next)
 
 
 });
-router.get('/index', function(req, res, next)
+router.get('/', function(req, res, next)
 {
   res.sendFile(path.join(__dirname,"../", 'views','index.html'));
 });
-router.get('/index.html', function(req, res, next)
+router.get('/index', function(req, res, next)
 {
   res.sendFile(path.join(__dirname,"../", 'views','index.html'));
 });
 router.get('/home', function(req, res, next)
 {
   res.sendFile(path.join(__dirname,"../", 'views','index.html'));
-});
-router.get('/recipeform.html', function(req, res, next)
-{
-  res.sendFile(path.join(__dirname,"../", 'views','recipeform.html'));
 });
 router.get('/recipeform', function(req, res, next)
 {
