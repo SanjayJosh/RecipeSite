@@ -2,6 +2,8 @@ body
 {
 	overflow-x: hidden;
 }
+
+
 .input-group
 {
 	position: absolute;
@@ -20,6 +22,9 @@ body
 {
 	padding: 3%;
 	text-align: justify;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1.7em;
+
 }
 
 .ingredients /* Listing of ingredients */
