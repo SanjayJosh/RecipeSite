@@ -2,12 +2,77 @@
   <head>
     <title>Recipe Website
     </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+    <link href="/stylesheets/view.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
     <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
     <script type="text/javascript" src="/javascripts/bootstrap.js"></script>
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="/javascripts/jquery.min.js"></script>
+  <!-- Custom Theme files -->
+  <!--theme-style-->
+  <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" media="all" />
+  <!--//theme-style-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Cookery Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+  Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <!---->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+  <!-- start-smoth-scrolling -->
+      <script type="text/javascript" src="/javascripts/move-top.js"></script>
+      <script type="text/javascript" src="/javascripts/easing.js"></script>
+      <script type="text/javascript">
+        jQuery(document).ready(function($) {
+          $(".scroll").click(function(event){
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+          });
+        });
+      </script>
+    <!-- start-smoth-scrolling -->
+  <link href="/stylesheets/homestyles.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/component.css" />
+    <!-- animation-effect -->
+  <link href="/stylesheets/animate.min.css" rel="stylesheet">
+  <script src="/javascripts/wow.min.js"></script>
+  <script>
+   new WOW().init();
+  </script>
+
+
   </head>
   <body>
+    <div class="container" style="background-color:black;color:white;padding:20px;">
+        <div class="logo animated wow pulse" data-wow-duration="1000ms" data-wow-delay="500ms">
+          <h1><a href="index"><span>C</span><img src="/images/oo.png" alt=""><img src="/images/oo.png" alt="">kery</a></h1>
+        </div>
+        <div class="nav-icon">
+          <a href="" class="navicon"></a>
+            <div class="toggle">
+              <ul class="toggle-menu">
+                  <li><a class="active" href="/index">Home</a></li>
+                  <li><a  href="/myform">Upload Recipe</a></li>
+                  <li><a  href="/yourdish">Prepare Your Dish</a></li>
+                  <li><a  href="/myview">View All Dishes</a></li>
+                  <li><a  href="/contact">Contact</a></li>
+              </ul>
+            </div>
+          <script>
+          $('.navicon').on('click', function (e) {
+            e.preventDefault();
+            $(this).toggleClass('navicon--active');
+            $('.toggle').toggleClass('toggle--active');
+          });
+          </script>
+        </div>
+      <div class="clearfix"></div>
+      </div>
+
   <%
   String.prototype.replaceAll = function(search, replacement) {
     var target = this;
@@ -17,7 +82,7 @@
   url = "/"; //Need to change during deployment
 
   %>
-    <form method="get" action="/myview"> 
+    <form method="get" action="/myview">
       <br>
       <div class="row">
         <div class="col-md-5">
@@ -36,7 +101,7 @@
 
     <% recipes.forEach( function(recipe) { %>
     <br><br>
-    <div class="row">
+    <div class="row" id="viewclass">
       <div class="col-sm-9">
         <div class="card">
           <img class="card-img-top" src="<%=recipe.imgurl %>" style="width:100%" alt="Card image cap">
@@ -48,7 +113,7 @@
 	   </a>
             <br>
             <h2 class="card-subtitle mb-2 "> Author</h2>
-            <p class="card-text">
+            <p class="card-text fixAuthor">
               <%=recipe.author %>
             </p>
             <br>

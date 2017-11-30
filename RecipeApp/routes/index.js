@@ -52,14 +52,14 @@ mongoose.connect(mongoDB);
 router.get('/myview', function(req, res, next)
 {
   findJson = {}
-  console.log(req.method)
+  //console.log(req.method)
   if( req.query.search )
   {
   		s = new RegExp( ".*" + req.query.search + ".*",'i')
   		var objId = SingleObjectId.getInstance() ;
   		findJson = { $or:[ {'_id':objId}, {'title': s},{'author':s},{'ingredients': s},{'procedure': s} ]};
 
-  		console.log(findJson)
+  		//console.log(findJson)
   }
 
 
@@ -71,7 +71,7 @@ router.get('/myview', function(req, res, next)
         	}
         	else
         	{
-            console.log(jsonResp)
+            //console.log(jsonResp)
         		res.render('myview',{recipes: jsonResp})
         	}
 

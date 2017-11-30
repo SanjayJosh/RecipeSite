@@ -6,7 +6,7 @@ body
 
 h2
 {
-	color:#d6d0c5;	
+	color:#d6d0c5;
 }
 
 .input-group
@@ -24,16 +24,16 @@ h2
 	background: #455A64;
 	color: #f2f1ef;
 
-	
+
 }
 
 .card-block
 {
 	padding: 3%;
 	text-align: justify;
-	font-family: "Times New Roman", Times, serif;
+	font-family: "Roboto",sans-serif;;
 	font-size: 1.7em;
-	
+
 
 }
 
@@ -44,7 +44,7 @@ h2
 }
 .no-list-style
 {
-	list-style-type: none;	
+	list-style-type: none;
 }
 .card-text
 {

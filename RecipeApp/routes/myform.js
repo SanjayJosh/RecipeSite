@@ -42,8 +42,7 @@ router.post('/uploadForm',FormUpload,function(req,res,next)
 
     var formData = req.body;
 
-
-    console.log(req.body);
+    //console.log(req.body);
 
     FormUpload(req,res,
     function(err)
@@ -63,11 +62,12 @@ router.post('/uploadForm',FormUpload,function(req,res,next)
           imgurl: "/uploads/" +filename,
           author:formData.recipeAuthor,
           ingredients:formData.ingredients.split(','),
-          procedure:formData.procedure,
+          procedure:formData.procedure.split('\n').join('\r\n'),
           likes:0,
           comments:[]
         };
 
+      console.log(formData.procedure.split('\n').length)
       recipes.create(RecipeObject,function(err,small){
         if(err)
         {

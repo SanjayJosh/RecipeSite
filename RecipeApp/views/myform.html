@@ -5,11 +5,76 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/recipeform.css">
+
+
+  <link href="/stylesheets/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/javascripts/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Cookery Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!---->
+<link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="/javascripts/move-top.js"></script>
+    <script type="text/javascript" src="/javascripts/easing.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){
+          event.preventDefault();
+          $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+      });
+    </script>
+  <!-- start-smoth-scrolling -->
+<link href="/stylesheets/homestyles.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/component.css" />
+  <!-- animation-effect -->
+<link href="/stylesheets/animate.min.css" rel="stylesheet">
+<script src="/javascripts/wow.min.js"></script>
+<script>
+ new WOW().init();
+</script>
+<link rel="stylesheet" type="text/css" href="/stylesheets/recipeform.css">
 </head>
 
 <body>
-<div class="back"></div>
+
+<div class="container" style="background-color:black;color:white;padding:20px;">
+    <div class="logo animated wow pulse" data-wow-duration="1000ms" data-wow-delay="500ms">
+      <h1><a href="index"><span>C</span><img src="/images/oo.png" alt=""><img src="/images/oo.png" alt="">kery</a></h1>
+    </div>
+    <div class="nav-icon">
+      <a href="" class="navicon"></a>
+        <div class="toggle">
+          <ul class="toggle-menu">
+              <li><a class="active" href="/index">Home</a></li>
+              <li><a  href="/myform">Upload Recipe</a></li>
+              <li><a  href="/yourdish">Prepare Your Dish</a></li>
+              <li><a  href="/myview">View All Dishes</a></li>
+              <li><a  href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      <script>
+      $('.navicon').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('navicon--active');
+        $('.toggle').toggleClass('toggle--active');
+      });
+      </script>
+    </div>
+  <div class="clearfix"></div>
+  </div>
+  
+
+<div class="back">
 <div class="registration-form">
   <header>
     <h1>Add a New Recipe!</h1>
@@ -22,7 +87,7 @@
     </div>
     <div class="input-section author-section folded">
       <input class="form-control author" type="text" placeholder="Enter author name" name="recipeAuthor"/>
-      <div class="animated-button"><span class="icon-lock"><i class="fa fa-user"></i></span><span class="next-button author"><i class="fa fa-arrow-up"></i></span></div>
+      <div class="animated-button"><span class="icon-lock"><i class="fa fa-user-o"></i></span><span class="next-button author"><i class="fa fa-arrow-up"></i></span></div>
     </div>
 	<div class="input-section ingredients-section folded">
       <input class="form-control ingredients" type="text" placeholder="Ingredients separated by commas" name="ingredients"/>
@@ -33,16 +98,16 @@
       <div class="animated-button"><span class="icon-lock"><i class="fa fa-pencil"></i></span><span class="next-button procedure"><i class="fa fa-arrow-up"></i></span></div>
     </div>
     <div class="input-section image-section folded">
-      <input class="form-control-file image" type="file" placeholder="ATTACH IMAGE" name="myPhotos"/>
+      <input class="form-control-file image" type="file" placeholder="ATTACH IMAGE" multiple name="myPhotos"/>
       <div class="animated-button"><span class="icon-repeat-lock"><i class="fa fa-file-image-o"></i></span><span class="next-button image"><i class="fa fa-paper-plane"></i></span></div>
     </div>
-    <div class="success"> 
+    <div class="success">
       <p>RECIPE ADDED!</p>
     </div>
   </form>
 </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-    <script  src="javascripts/recipeform.js"></script>
+<script  src="javascripts/recipeform.js"></script>
 </body>
 </html>
