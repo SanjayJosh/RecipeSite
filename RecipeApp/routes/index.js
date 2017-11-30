@@ -92,8 +92,4 @@ router.get('/home', function(req, res, next)
 {
   res.sendFile(path.join(__dirname,"../", 'views','index.html'));
 });
-router.get('/recipeform', function(req, res, next)
-{
-  res.sendFile(path.join(__dirname,"../", 'views','recipeform.html'));
-});
 module.exports = router;

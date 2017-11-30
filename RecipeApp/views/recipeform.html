@@ -15,21 +15,29 @@
     <h1>Add a New Recipe!</h1>
     <p>Fill in all fields</p>
   </header>
-  <form>
-    <div class="input-section email-section">
-      <input class="email" type="text" placeholder="ENTER YOUR RECIPE TITLE" autocomplete="off"/>
-      <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-envelope-o"></i></span><span class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
+  <form action="/myform/uploadForm" method="POST" enctype="multipart/form-data">
+    <div class="input-section title-section">
+      <input class="form-control title" type="text" placeholder="Enter your reciple title" name="recipeTitle" autocomplete="off"/>
+      <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-quote-right"></i></span><span class="next-button title"><i class="fa fa-arrow-up"></i></span></div>
     </div>
-    <div class="input-section password-section folded">
-      <input class="password" type="text" placeholder="ENTER AUTHOR NAME"/>
-      <div class="animated-button"><span class="icon-lock"><i class="fa fa-lock"></i></span><span class="next-button password"><i class="fa fa-arrow-up"></i></span></div>
+    <div class="input-section author-section folded">
+      <input class="form-control author" type="text" placeholder="Enter author name" name="recipeAuthor"/>
+      <div class="animated-button"><span class="icon-lock"><i class="fa fa-user-o"></i></span><span class="next-button author"><i class="fa fa-arrow-up"></i></span></div>
     </div>
-    <div class="input-section repeat-password-section folded">
-      <input class="repeat-password" type="text" placeholder="ENTER INGREDIENTS"/>
-      <div class="animated-button"><span class="icon-repeat-lock"><i class="fa fa-lock"></i></span><span class="next-button repeat-password"><i class="fa fa-paper-plane"></i></span></div>
+	<div class="input-section ingredients-section folded">
+      <input class="form-control ingredients" type="text" placeholder="Ingredients separated by commas" name="ingredients"/>
+      <div class="animated-button"><span class="icon-lock"><i class="fa fa-shopping-basket"></i></span><span class="next-button ingredients"><i class="fa fa-arrow-up"></i></span></div>
+    </div>
+	<div class="input-section procedure-section folded">
+      <textarea class="form-control procedure" placeholder="Enter the procedure" name="procedure"></textarea>
+      <div class="animated-button"><span class="icon-lock"><i class="fa fa-pencil"></i></span><span class="next-button procedure"><i class="fa fa-arrow-up"></i></span></div>
+    </div>
+    <div class="input-section image-section folded">
+      <input class="form-control-file image" type="file" placeholder="ATTACH IMAGE" name="myPhotos"/>
+      <div class="animated-button"><span class="icon-repeat-lock"><i class="fa fa-file-image-o"></i></span><span class="next-button image"><i class="fa fa-paper-plane"></i></span></div>
     </div>
     <div class="success"> 
-      <p>ACCOUNT CREATED</p>
+      <p>RECIPE ADDED!</p>
     </div>
   </form>
 </div>

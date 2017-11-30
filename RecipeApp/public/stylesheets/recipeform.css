@@ -120,6 +120,42 @@ body {
   font-weight: 100;
 }
 
+
+.registration-form .input-section.folded + .folded textarea {
+  background-color: #e1bcef;
+}
+.registration-form .input-section.fold-up {
+  margin-top: -75px;
+}
+.registration-form form textarea {
+  background: white;
+  color: #8f8fd6;
+  width: 80%;
+  border: 0;
+  padding: 20px 40px;
+  margin: 0;
+}
+.registration-form form textarea:focus {
+  outline: none;
+}
+.registration-form form textarea::-webkit-input-placeholder {
+  color: #8f8fd6;
+  font-weight: 100;
+}
+.registration-form form textarea::-moz-placeholder {
+  color: #8f8fd6;
+  font-weight: 100;
+}
+.registration-form form textarea:-ms-input-placeholder {
+  color: #8f8fd6;
+  font-weight: 100;
+}
+.registration-form form textarea::placeholder {
+  color: #8f8fd6;
+  font-weight: 100;
+}
+
+
 .animated-button {
   width: 20%;
   background-color: #d4d4ff;
