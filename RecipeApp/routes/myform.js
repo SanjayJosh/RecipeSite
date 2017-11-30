@@ -39,12 +39,12 @@ router.get('/', function(req, res, next)
 
 router.post('/uploadForm',FormUpload,function(req,res,next)
 {
-  
+
     var formData = req.body;
 
 
     console.log(req.body);
-    
+
     FormUpload(req,res,
     function(err)
     {
@@ -54,7 +54,7 @@ router.post('/uploadForm',FormUpload,function(req,res,next)
         return res.end("Error uploading Image files")
       }
     })
-    
+
     filename = myfiles[0];
 
      RecipeObject=
@@ -74,7 +74,7 @@ router.post('/uploadForm',FormUpload,function(req,res,next)
             console.log(err)
             return res.end("Error uploading to mongoDB")
         }
-		
+
       })
 
       res.redirect("/");

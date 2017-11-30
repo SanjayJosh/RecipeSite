@@ -9,6 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var myform =require('./routes/myform');
 var yourdish =require('./routes/yourdish');
+var item= require('./routes/item');
 var app = express();
 
 // view engine setup
@@ -27,6 +28,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/myform',myform)
 app.use('/yourdish',yourdish)
+app.use('/item',item)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
